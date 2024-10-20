@@ -1,0 +1,100 @@
+<header class="relative flex mx-20 my-10 bg-gradient-to-r from-lime-500 to-blue-500">
+  <div class="relative w-full mx-2 rounded-lg p-7 flex flex-wrap justify-center">
+    <h1 class="text-4xl text-center my-5">Tienda Retro SavePoint</h1>
+    <img src="./../assets/img/icon.png" class="w-auto h-auto hover:rotate-[360deg] transition duration-1000">
+  </div>
+  <div class="relative w-full mx-2 rounded-lg p-7 flex flex-wrap justify-center">
+    <h1 class="text-4xl text-center my-5">¿Quienes Somos?</h1>
+    <p class="text-justify">En SavePoint, somos apasionados por la nostalgia y la diversión de los videojuegos retro. Nos dedicamos a ofrecer una cuidada selección de consolas clásicas y videojuegos icónicos que transportan a nuestros clientes a la época dorada de los videojuegos. Nuestro objetivo es revivir esos momentos inolvidables y compartir la magia de los juegos que marcaron generaciones. Creemos en la calidad y en la experiencia del cliente, por lo que cada consola que vendemos ha sido revisada y restaurada para garantizar su funcionamiento óptimo. Únete a nosotros en este viaje al pasado y redescubre la esencia de los videojuegos en su forma más pura.</p>
+  </div>
+</header>
+
+<section class="relative mx-20 my-5 flex">
+  <div class="w-[50%] bg-blue-500 rounded-lg p-7 mx-2 flex flex-wrap justify-center">
+    <h1 class="text-4xl text-center my-5">Misión</h1>
+    <p class="text-justify">Nuestra misión es revivir la nostalgia de los videojuegos clásicos, ofreciendo consolas retro y accesorios de alta calidad que conecten a las personas con sus recuerdos más entrañables. Nos comprometemos a proporcionar una experiencia de compra excepcional y un servicio al cliente dedicado, fomentando una comunidad de amantes de los videojuegos de todas las generaciones.</p>
+    <img src="./../assets/img/icon2.png" class="size-32 invert hover:rotate-[360deg] transition duration-1000">
+  </div>
+  <div class="w-[50%] bg-red-500 rounded-lg flex flex-wrap p-7 mx-2 justify-center">
+    <h1 class="text-4xl text-center my-5">Visión</h1>
+    <p class="text-justify">Nuestra visión es ser la tienda líder en el mercado de consolas retro, creando un espacio donde la pasión por los videojuegos clásicos se celebre y comparta. Aspiramos a expandir nuestra oferta a través de innovaciones que mantengan viva la cultura del gaming retro, convirtiéndonos en un referente en la conservación y celebración de la historia del videojuego.</p>
+    <img src="./../assets/img/icon2.png" class="size-32 invert hover:rotate-[360deg] transition duration-1000">
+  </div>
+</section>
+
+<section class="relative mx-20 my-5">
+  <div class="w-full bg-purple-500 rounded-lg flex flex-wrap p-7 m-2 justify-center">
+    <h1 class="text-4xl text-center my-5">Lo que ofrecemos</h1>
+    <p class="text-justify">En nuestra tienda, ofrecemos una amplia selección de consolas y juegos retro originales de Nintendo y Sega, perfectos para los amantes de la nostalgia y los videojuegos clásicos. Desde la icónica Nintendo Entertainment System (NES) hasta la clásica Sega Genesis, cada consola ha sido cuidadosamente revisada para garantizar su funcionalidad y autenticidad. Además, contamos con una variedad de juegos originales que te transportarán a los días dorados de los videojuegos, con títulos legendarios que han marcado generaciones. Ya seas un coleccionista experimentado o un nuevo entusiasta, aquí encontrarás la calidad y el valor que buscas en cada compra. ¡Revive la magia de los juegos retro con nosotros!
+    </p>
+    <img src="./../assets/img/icon3.png" class="size-32 invert hover:rotate-[360deg] transition duration-1000">
+  </div>
+</section>
+
+<section class="relative mx-20 my-5 flex flex-wrap">
+  <div class="w-full bg-orange-500 rounded-lg p-7 m-2">
+    <h1 class="text-4xl text-center my-5">Nuestros Productos</h1>
+    <div class="flex flex-row justify-center m-5">
+      <button type="button" class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 
+      focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mx-5" (click)="typeConsole = 1">Nintendo</button>
+      <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 
+      focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mx-5" (click)="typeConsole = 2">Sega</button>
+      <button type="button" class="text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 
+      focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mx-5" (click)="typeConsole = 3">Playstation</button>
+    </div>
+    <div *ngIf="typeConsole == 1"><app-carrusel [items] = nintData ></app-carrusel></div>
+    <div *ngIf="typeConsole == 2"><app-carrusel [items] = segaData ></app-carrusel></div>
+    <div *ngIf="typeConsole == 3"><app-carrusel [items] = playData ></app-carrusel></div>
+  </div>
+</section>
+
+<section class="w-full bg-white text-black font-serif p-10 flex flex-row justify-between">
+  <div>
+    <h1 class="text-4xl text-left my-5 mx-5 ">Preguntas Frecuentes</h1>
+    <h2 class="text-2xl my-5 mx-5"><span class="text-purple-600">&#9679;</span> ¿Cómo aseguramos la originalidad de los productos?</h2>
+    <p class="m-5" >Cada juego es original, puedes verificarlo abriendo el jeugo e inspeccionando su sello de autenticidad incorporado en el juego y/o consola.</p>
+    <h2 class="text-2xl my-5 mx-5"><span class="text-purple-600">&#9679;</span> ¿Existe garantia?</h2>
+    <p class="m-5" >Sí, ofrecemos garantía en todos nuestros productos. La duración y condiciones de la garantía pueden variar según el artículo, pero generalmente cubre defectos de fabricación y problemas de funcionamiento. Si tienes algún inconveniente con tu compra, no dudes en contactarnos y te ayudaremos a resolverlo. ¡Tu satisfacción es nuestra prioridad!</p>
+    <h2 class="text-2xl my-5 mx-5"><span class="text-purple-600">&#9679;</span> ¿Hacen envios a todo Chile?</h2>
+    <p class="m-5">Sí, hacemos envíos a todo Chile. Puedes realizar tu compra en línea y seleccionaremos la mejor opción de envío para que recibas tu pedido rápidamente. Si tienes más preguntas sobre el proceso de envío, no dudes en consultarnos. ¡Estamos aquí para ayudarte!</p>
+    <h2 class="text-2xl my-5 mx-5"><span class="text-purple-600">&#9679;</span> ¿Cuanto es el tiempo que se demora de envio</h2>
+    <p class="m-5">El tiempo de envío puede variar según la ubicación y el tipo de servicio de entrega seleccionado. En general, los envíos dentro de Chile suelen tardar entre 3 y 7 días hábiles. Una vez que procesemos tu pedido, te proporcionaremos un número de seguimiento para que puedas estar al tanto de su estado. Si tienes una ubicación específica en mente, podemos darte un estimado más preciso. ¡Estamos aquí para ayudarte!</p>
+  </div>
+  <div>
+    <img src="./../assets/img/icon.png" class="w-auto h-auto opacity-5">
+  </div>
+</section>
+
+<section class="w-full py-5">
+  <h1 class="text-4xl text-center my-5">Opinion de algunos de nuestros clientes:</h1>
+  <app-clientes [items] = clientesData></app-clientes>
+</section>
+
+<footer class="text-white shadow bg-slate-800">
+  <div class="mx-auto w-full max-w-screen-xl p-4 md:py-8">
+      <ul class="flex flex-wrap items-center mb-6 text-sm font-medium sm:mb-0 ">
+          <li>
+              <button type="button">
+                  <a href="">
+                      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
+                          <radialGradient id="yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1" cx="19.38" cy="42.035" r="44.899" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fd5"></stop><stop offset=".328" stop-color="#ff543f"></stop><stop offset=".348" stop-color="#fc5245"></stop><stop offset=".504" stop-color="#e64771"></stop><stop offset=".643" stop-color="#d53e91"></stop><stop offset=".761" stop-color="#cc39a4"></stop><stop offset=".841" stop-color="#c837ab"></stop></radialGradient><path fill="url(#yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1)" d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"></path><radialGradient id="yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2" cx="11.786" cy="5.54" r="29.813" gradientTransform="matrix(1 0 0 .6663 0 1.849)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4168c9"></stop><stop offset=".999" stop-color="#4168c9" stop-opacity="0"></stop></radialGradient><path fill="url(#yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2)" d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"></path><path fill="#fff" d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z"></path><circle cx="31.5" cy="16.5" r="1.5" fill="#fff"></circle><path fill="#fff" d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z"></path>
+                      </svg>
+                  </a>
+              </button>
+          </li>
+          <li>
+              <button type="button">
+                  <a href="">
+                      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
+                          <path fill="#212121" fill-rule="evenodd" d="M10.904,6h26.191C39.804,6,42,8.196,42,10.904v26.191 C42,39.804,39.804,42,37.096,42H10.904C8.196,42,6,39.804,6,37.096V10.904C6,8.196,8.196,6,10.904,6z" clip-rule="evenodd"></path><path fill="#ec407a" fill-rule="evenodd" d="M29.208,20.607c1.576,1.126,3.507,1.788,5.592,1.788v-4.011 c-0.395,0-0.788-0.041-1.174-0.123v3.157c-2.085,0-4.015-0.663-5.592-1.788v8.184c0,4.094-3.321,7.413-7.417,7.413 c-1.528,0-2.949-0.462-4.129-1.254c1.347,1.376,3.225,2.23,5.303,2.23c4.096,0,7.417-3.319,7.417-7.413L29.208,20.607L29.208,20.607 z M30.657,16.561c-0.805-0.879-1.334-2.016-1.449-3.273v-0.516h-1.113C28.375,14.369,29.331,15.734,30.657,16.561L30.657,16.561z M19.079,30.832c-0.45-0.59-0.693-1.311-0.692-2.053c0-1.873,1.519-3.391,3.393-3.391c0.349,0,0.696,0.053,1.029,0.159v-4.1 c-0.389-0.053-0.781-0.076-1.174-0.068v3.191c-0.333-0.106-0.68-0.159-1.03-0.159c-1.874,0-3.393,1.518-3.393,3.391 C17.213,29.127,17.972,30.274,19.079,30.832z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M28.034,19.63c1.576,1.126,3.507,1.788,5.592,1.788v-3.157 c-1.164-0.248-2.194-0.856-2.969-1.701c-1.326-0.827-2.281-2.191-2.561-3.788h-2.923v16.018c-0.007,1.867-1.523,3.379-3.393,3.379 c-1.102,0-2.081-0.525-2.701-1.338c-1.107-0.558-1.866-1.705-1.866-3.029c0-1.873,1.519-3.391,3.393-3.391 c0.359,0,0.705,0.056,1.03,0.159V21.38c-4.024,0.083-7.26,3.369-7.26,7.411c0,2.018,0.806,3.847,2.114,5.183 c1.18,0.792,2.601,1.254,4.129,1.254c4.096,0,7.417-3.319,7.417-7.413L28.034,19.63L28.034,19.63z" clip-rule="evenodd"></path><path fill="#81d4fa" fill-rule="evenodd" d="M33.626,18.262v-0.854c-1.05,0.002-2.078-0.292-2.969-0.848 C31.445,17.423,32.483,18.018,33.626,18.262z M28.095,12.772c-0.027-0.153-0.047-0.306-0.061-0.461v-0.516h-4.036v16.019 c-0.006,1.867-1.523,3.379-3.393,3.379c-0.549,0-1.067-0.13-1.526-0.362c0.62,0.813,1.599,1.338,2.701,1.338 c1.87,0,3.386-1.512,3.393-3.379V12.772H28.095z M21.635,21.38v-0.909c-0.337-0.046-0.677-0.069-1.018-0.069 c-4.097,0-7.417,3.319-7.417,7.413c0,2.567,1.305,4.829,3.288,6.159c-1.308-1.336-2.114-3.165-2.114-5.183 C14.374,24.749,17.611,21.463,21.635,21.38z" clip-rule="evenodd"></path>
+                      </svg>
+                  </a>
+              </button>
+          </li>
+      </ul>
+      <hr class="footer_line my-6 border-gray-200 sm:mx-auto"/>
+      <span class="footer_tdr block text-sm text-white sm:text-center"><b>© 2024 Save Point Chile</b>, todos los derechos reservados.</span>
+      <p> <b>Contacto:</b> <i>+569 1234 5678</i></p>
+      <p> <b>Correo:</b> <i> savepoint_maule&#64;gmail.com</i></p>
+  </div>
+</footer>

@@ -1,0 +1,25 @@
+<div class="flex flex-row font-mono justify-between">  
+            <ng-container *ngFor="let section of items">
+                <div class="bg-red-700 m-5 p-5 rounded-lg text-center" *ngIf ="section.id<=2">
+                    <h2 class="text-xl italic text-center">{{section.username}}</h2>
+                    <p>{{section.description}}</p>
+                </div>      
+            </ng-container>
+</div>
+<div class="flex flex-row font-mono justify-between">  
+            <ng-container *ngFor="let section of items">
+                <div class="bg-green-600 m-5 p-5 rounded-lg text-center" *ngIf ="section.id>2 && section.id<=4">
+                    <h2 class="text-xl italic">{{section.username}}</h2>
+                    <p>{{section.description}}</p>
+                </div>      
+            </ng-container>
+</div>
+<div class="flex flex-row font-mono justify-between">  
+            <ng-container *ngFor="let section of items">
+                <div class="bg-yellow-600 m-5 p-5 rounded-lg text-center" *ngIf ="section.id>4 && section.id<=6">
+                    <h2 class="text-xl italic">{{section.username}}</h2>
+                    <p>{{section.description}}</p>
+                </div>      
+            </ng-container>
+</div>
+

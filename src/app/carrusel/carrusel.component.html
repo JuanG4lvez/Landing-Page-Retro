@@ -1,0 +1,23 @@
+
+<div class=" relative flex items-center justify-center w-full h-[80vh]
+before:content-[''] before:w-max before:h-max before:absolute before:top-0 before:left-0 overflow-hidden" 
+    [ngStyle]="{'min-height': finalHeight}">
+    <div class=" absolute m-auto flex w-full justify-between">
+                <button type="button" class="opacity-70 justify-between" (click)="setBack()">
+                    <svg fill="#b0b0b0" height="50px" width="50px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve" stroke="#b0b0b0" transform="matrix(-1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z"></path> </g></svg>
+                </button>
+                <button type="button" class="opacity-70 justify-between" (click)="setNext()">
+                    <svg fill="#b0b0b0" height="50px" width="50px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve" stroke="#b0b0b0"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z"></path> </g></svg>
+                </button>
+    </div>
+    
+    <div class="text-center w-full flex self-stretch overflow-hidden">
+                <ng-container *ngFor="let section of items">
+                    <div class="p-52 float-left flex items-center justify-center min-w-full h-[90%] 
+                    bg-no-repeat bg-contain bg-center bg-origin-border transition-all max-[416px]:px-0 brightness-5" 
+                    [ngStyle]="{'background-image' : 'url('+ section.image +')', 'margin-left' : '' + section.marginleft + '%'}">
+                        <div class="absolute bottom-0 text-2xl font-black">{{section.subtitle}}: ${{section.price}}</div>
+                    </div>
+                </ng-container>
+    </div>
+</div>
